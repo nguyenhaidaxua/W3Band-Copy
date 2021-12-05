@@ -70,18 +70,18 @@
                     veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                 <!-- End About -->
                 <!-- Begin Member -->
-                <div class="members-list">
-                    <div class="member-item">
+                <div class="members-list text-center">
+                    <div class="col col-3 ">
                         <p class="member-name">Name</p>
                         <img src="https://pbs.twimg.com/profile_images/970628204443574272/AOMCkO56_400x400.jpg" alt=""
                             class="member-img">
                     </div>
-                    <div class="member-item">
+                    <div class="col col-3">
                         <p class="member-name">Name</p>
                         <img src="https://pbs.twimg.com/profile_images/970628204443574272/AOMCkO56_400x400.jpg" alt=""
                             class="member-img">
                     </div>
-                    <div class="member-item">
+                    <div class="col col-3">
                         <p class="member-name">Name</p>
                         <img src="https://pbs.twimg.com/profile_images/970628204443574272/AOMCkO56_400x400.jpg" alt=""
                             class="member-img">
@@ -103,10 +103,9 @@
                         <li>November <span class="quantity">3</span></li>
                     </ul>
                     <!-- Tour  Place -->
-                    <div class="tour-list-items">
-                        <div class="tour-item">
-                            <img src="/assets/img/tour/1.png"
-                                alt="" class="tour-img">
+                    <div class="tour-list-items row">
+                        <div class="tour-item col col-3">
+                            <img src="/assets/img/tour/1.png" alt="" class="tour-img">
                             <div class="tour-body">
                                 <h3 class="tour-heading">Kagaku City</h3>
                                 <p class="tour-time">Fri 27 Nov 2016</p>
@@ -115,9 +114,8 @@
                             </div>
 
                         </div>
-                        <div class="tour-item">
-                            <img src="/assets/img/tour/2.jpg"
-                                alt="" class="tour-img">
+                        <div class="tour-item col col-3">
+                            <img src="/assets/img/tour/2.jpg" alt="" class="tour-img">
                             <div class="tour-body">
                                 <h3 class="tour-heading">Anti-Gravity City</h3>
                                 <p class="tour-time">Sat 28 Nov 2016</p>
@@ -126,9 +124,8 @@
                             </div>
 
                         </div>
-                        <div class="tour-item">
-                            <img src="/assets/img/tour/3.jpg"
-                                alt="" class="tour-img">
+                        <div class="tour-item col col-3">
+                            <img src="/assets/img/tour/3.jpg" alt="" class="tour-img">
                             <div class="tour-body">
                                 <h3 class="tour-heading">Kagaku City 2</h3>
                                 <p class="tour-time">Sun 29 Nov 2016</p>
@@ -137,10 +134,10 @@
                             </div>
 
                         </div>
-                        <div class="clear"></div>
+                         required 
 
                     </div>
-                    
+
                 </div>
 
             </div>
@@ -149,6 +146,53 @@
                 <h2 class="section-heading">CONTACT</h2>
                 <p class="section-slogan">Fan? Drop a note!</p>
 
+                <div class="row contact-container">
+                    <div class="col col-2 infos-list">
+                        <p class="info">
+                            <i class="ti-location-pin icon"></i>
+                            Chicago, US
+                        </p>
+                        <p class="info">
+                            <i class="ti-mobile icon"></i>
+                            Phone: +00 151515
+                        </p>
+                        <p class="info">
+                            <i class="ti-email icon"></i>
+                            Email: mail@mail.com
+                        </p>
+
+                    </div>
+                    <div class="col col-2 form-container">
+                        <form action="">
+                            <div class="row upper-form">
+                                <div class="col col-2">
+                                    <input  required type="text" name="" placeholder="Name" id="" class="form-control">
+                                </div>
+                                <div class="col col-2 upper-form">
+                                    <input required  type="email" name="" placeholder="Email" id="" class="form-control">
+                                </div>
+                            </div>
+                           
+                           
+                           
+                           
+                            <div class="row under-form" >
+                                <div class="col col-1">
+                                    <input required  type="text" name="" placeholder="Message" id="" class="form-control">
+                                </div>
+
+                            </div>
+                            <input class="submit-btn" type="submit" value="SEND">
+
+
+
+
+                        </form>
+
+                    </div>
+                  
+                </div>
+                
             </div>
         </div>
 
@@ -162,10 +206,10 @@
 
         <div class="modal-container">
             <div class=" modal-close-icon js-close-btn">
-               <i class="ti-close"></i>
+                <i class="ti-close"></i>
             </div>
             <header class="modal-header js-modal-container">
-                
+
                 <h2 class="header">
                     <i class="modal-icon ti-briefcase"></i>
                     Tickets
@@ -184,17 +228,17 @@
                 </label>
                 <input type="email" class="modal-input" id="modal-email" placeholder="Enter email">
                 <button class="modal-btn">
-                    
+
                     PAY
                     <i class="ti-check"></i>
                 </button>
-            
+
             </div>
             <footer class="modal-footer js-modal-container">
                 <p class="modal-help">Need <a href="#" class="help-link">help?</a></p>
                 <div class="clear"></div>
             </footer>
-            
+
         </div>
 
     </div>
@@ -206,22 +250,22 @@
         function OpenModal() {
             modal.classList.add('open')
         }
-         function CloseModal() {
+        function CloseModal() {
             modal.classList.remove('open')
         }
-       
-        for( const ticketBtn of ticketBtns){
-            ticketBtn.addEventListener('click',OpenModal)
+
+        for (const ticketBtn of ticketBtns) {
+            ticketBtn.addEventListener('click', OpenModal)
         }
-        closeBtn.addEventListener('click',CloseModal)
-        for (const container of modalContainer){
+        closeBtn.addEventListener('click', CloseModal)
+        for (const container of modalContainer) {
             container.addEventListener('click', function (e) {
                 e.stopPropagation()
             })
-                
+
         }
-   
-            
+
+
     </script>
 </body>
 

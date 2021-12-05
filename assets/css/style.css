@@ -18,6 +18,39 @@ html {
     color: white !important;
 }
 
+.text-center {
+    text-align: center !important;
+}
+
+.col {
+    float: left;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.row::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.row {
+    margin-left: -8px;
+    margin-right: -8px;
+}
+
+.col-3 {
+    width: 33.33333%;
+}
+
+.col-2 {
+    width: 50%;
+}
+
+.col-1 {
+    width: 100%;
+}
+
 #main {}
 
 #header {
@@ -179,17 +212,13 @@ html {
 }
 
 #content .members-list {
-    text-align: center;
+
     margin-top: 47px;
     padding-bottom: 32px;
 
 }
 
-#content .member-item {
-    float: left;
-    width: 33.33333%;
 
-}
 
 #content .member-name {
     font-size: 15px;
@@ -243,16 +272,12 @@ html {
 
 .tour-list-items {
 
-    margin: 32px -8px 0px -8px;
+    margin-top: 32px;
     padding-bottom: 48px;
 
 }
 
-.tour-item {
-    float: left;
-    width: 33.33333%;
-    padding: 8px
-}
+
 
 .tour-img {
 
@@ -298,6 +323,48 @@ html {
     opacity: 0.6;
 }
 
+.contact-container {
+    padding: 32px 0;
+    font-size: 18px;
+}
+
+.infos-list {
+    line-height: 1.4;
+}
+
+.icon {
+    width: 30px;
+    display: inline-block;
+}
+
+
+
+.form-control {
+    border: 1px solid #ccc;
+    padding: 8px;
+    width: 100%;
+}
+
+
+.upper-form {
+    padding-bottom: 8px;
+}
+
+
+.submit-btn {
+    background: black;
+    color: white;
+    border: none;
+    float: right;
+    padding: 10px 16px;
+    margin-top: 16px;
+}
+
+.submit-btn:hover{
+    cursor: pointer;
+    color: black;
+    background: gray;
+}
 
 /* Modal Buy Ticket */
 .modal.open {
@@ -390,6 +457,7 @@ html {
     opacity: 0.9;
     cursor: pointer;
 }
+
 .modal-help {
     float: right;
     margin: 16px;
