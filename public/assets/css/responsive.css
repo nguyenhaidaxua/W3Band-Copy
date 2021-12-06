@@ -1,0 +1,98 @@
+/* PC */
+@media (min-width: 1024px) {
+    #header .menu-btn {
+        display: none;
+    }
+}
+
+/* Tablet */
+@media (min-width: 740px) and (max-width: 1023px) {
+    #header .menu-btn {
+        display: none;
+    }
+}
+
+/* Mobile */
+@media (max-width: 740px) {
+    #nav {
+        display: block;
+    }
+
+    #nav .subnav {
+        position: initial;
+        background: #333;
+
+
+    }
+
+    #nav .closeSubNav {
+        position: absolute;
+    }
+
+    #nav .subnav a {
+        color: white;
+        border-bottom: 1px white solid;
+        padding: 5px 40px;
+    }
+
+    #nav>li {
+        display: block;
+    }
+
+    #nav>li:first-child {
+        display: inline-block;
+    }
+
+    #nav li a {
+        display: block;
+        padding: 1px 24px
+    }
+
+    #header {
+        overflow: hidden;
+    }
+
+    #header .search {
+        display: none;
+    }
+
+    #content .member-name {
+        padding-bottom: 16px;
+    }
+
+    #content .member-item {
+        padding-top: 48px;
+        width: 100%;
+    }
+
+    #content .tour-item {
+        padding-top: 30px;
+        width: 100%;
+    }
+
+    #content .tour-btn{
+        width: 100%;
+    }
+    .modal-container {
+        width: 70%;
+
+    }
+
+    #content .contact-item-mobile {
+        width: 100%;
+    }
+
+    #content .form-control {
+        padding: 16px;
+    }
+
+    #content .upper-form {
+        margin-top: 16px;
+    }
+
+    #content .submit-btn {
+        width: 100%;
+        padding: 16px;
+    }
+
+}

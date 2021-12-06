@@ -7,7 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My First Website Static :(</title>
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
     <link rel="stylesheet" href="./assets/fonts/themify-icons/themify-icons.css">
+    
 </head>
 
 <body>
@@ -16,19 +18,19 @@
         <div id="header">
             <!-- Begin Nav -->
             <ul id="nav">
-                <li><a href="">Home</a></li>
-                <li><a href="">Band</a></li>
-                <li><a href="">Tour</a></li>
-                <li><a href="">Contact</a></li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#band">Band</a></li>
+                <li><a href="#tour">Tour</a></li>
+                <li><a href="#contact">Contact</a></li>
                 <li>
-                    <a href="">
+                    <a href="#">
                         More
                         <i class="nav-arrow-down ti-angle-down"></i>
                     </a>
-                    <ul class="subnav">
-                        <li><a href="">Merchandise</a></li>
-                        <li><a href="">Extras</a></li>
-                        <li><a href="">Media</a></li>
+                    <ul class="subnav closeSubNav">
+                        <li><a href="#">Merchandise</a></li>
+                        <li><a href="#">Extras</a></li>
+                        <li><a href="#">Media</a></li>
                     </ul>
                 </li>
             </ul>
@@ -39,7 +41,9 @@
             <div class="search">
                 <i class="search-icon ti-search"></i>
             </div>
-
+            <div class="menu-btn">
+                <i class="menu-icon ti-menu"></i>
+            </div>
             <!-- End Search Button -->
 
         </div>
@@ -54,7 +58,7 @@
 
         <div id="content">
             <!-- Begin About -->
-            <div class="section-content">
+            <div id="band" class="section-content">
                 <h2 class="section-heading">THE BAND</h2>
                 <p class="section-slogan">We love music</p>
                 <p class="about">We have created a fictional band website. Lorem ipsum dolor sit amet, consectetur
@@ -71,17 +75,17 @@
                 <!-- End About -->
                 <!-- Begin Member -->
                 <div class="members-list text-center">
-                    <div class="col col-3 ">
+                    <div class="member-item col col-3 ">
                         <p class="member-name">Name</p>
                         <img src="https://pbs.twimg.com/profile_images/970628204443574272/AOMCkO56_400x400.jpg" alt=""
                             class="member-img">
                     </div>
-                    <div class="col col-3">
+                    <div class="member-item col col-3">
                         <p class="member-name">Name</p>
                         <img src="https://pbs.twimg.com/profile_images/970628204443574272/AOMCkO56_400x400.jpg" alt=""
                             class="member-img">
                     </div>
-                    <div class="col col-3">
+                    <div class="member-item col col-3">
                         <p class="member-name">Name</p>
                         <img src="https://pbs.twimg.com/profile_images/970628204443574272/AOMCkO56_400x400.jpg" alt=""
                             class="member-img">
@@ -91,7 +95,7 @@
                 <!-- End Member -->
             </div>
             <!-- Begin Tour -->
-            <div class="tour-section">
+            <div id="tour" class="tour-section">
 
                 <div class="section-content">
                     <h2 class="section-heading text-white">TOUR DATES</h2>
@@ -105,7 +109,7 @@
                     <!-- Tour  Place -->
                     <div class="tour-list-items row">
                         <div class="tour-item col col-3">
-                            <img src="/assets/img/tour/1.png" alt="" class="tour-img">
+                            <img src="/public/assets/img/tour/1.png" alt="" class="tour-img">
                             <div class="tour-body">
                                 <h3 class="tour-heading">Kagaku City</h3>
                                 <p class="tour-time">Fri 27 Nov 2016</p>
@@ -115,7 +119,7 @@
 
                         </div>
                         <div class="tour-item col col-3">
-                            <img src="/assets/img/tour/2.jpg" alt="" class="tour-img">
+                            <img src="/public/assets/img/tour/2.jpg" alt="" class="tour-img">
                             <div class="tour-body">
                                 <h3 class="tour-heading">Anti-Gravity City</h3>
                                 <p class="tour-time">Sat 28 Nov 2016</p>
@@ -125,7 +129,7 @@
 
                         </div>
                         <div class="tour-item col col-3">
-                            <img src="/assets/img/tour/3.jpg" alt="" class="tour-img">
+                            <img src="/public/assets/img/tour/3.jpg" alt="" class="tour-img">
                             <div class="tour-body">
                                 <h3 class="tour-heading">Kagaku City 2</h3>
                                 <p class="tour-time">Sun 29 Nov 2016</p>
@@ -134,20 +138,20 @@
                             </div>
 
                         </div>
-                        required
+                        
 
                     </div>
 
                 </div>
 
             </div>
-            <!-- Begin Section -->
-            <div class="section-content">
+            <!-- Begin Section Contact -->
+            <div id="contact" class="section-content">
                 <h2 class="section-heading">CONTACT</h2>
                 <p class="section-slogan">Fan? Drop a note!</p>
 
                 <div class="row contact-container">
-                    <div class="col col-2 infos-list">
+                    <div class="contact-item-mobile  col col-2 infos-list">
                         <p class="info">
                             <i class="ti-location-pin icon"></i>
                             Chicago, US
@@ -162,13 +166,13 @@
                         </p>
 
                     </div>
-                    <div class="col col-2 form-container">
+                    <div class="contact-item-mobile  col col-2 form-container">
                         <form action="">
                             <div class="row upper-form">
-                                <div class="col col-2">
+                                <div class="contact-item-mobile col col-2">
                                     <input required type="text" name="" placeholder="Name" id="" class="form-control">
                                 </div>
-                                <div class="col col-2 upper-form">
+                                <div class="contact-item-mobile col col-2 upper-form">
                                     <input required type="email" name="" placeholder="Email" id="" class="form-control">
                                 </div>
                             </div>
@@ -195,8 +199,8 @@
                 </div>
 
             </div>
-            <!-- End Section -->
-            <div class="map"><img src="/assets/img/map.jpg" alt=""></div>
+            <!-- End Section Contact-->
+            <div class="map"><img src="/public/assets/img/map.jpg" alt=""></div>
         </div>
 
         <div id="footer">
@@ -276,8 +280,45 @@
 
         }
 
+        // Responsive
 
+        const mobileMenu = document.querySelector('.menu-btn')
+        const header = document.getElementById('header')
+        const headerHeight = header.clientHeight
+            mobileMenu.addEventListener('click',function (){
+                var isClose = header.clientHeight === headerHeight;
+                if (isClose) {
+                    header.style.height = 'auto'
+                    
+                }
+                else{
+                    header.style.height = null
+                    
+                }
+            })
+        
+        const subNavItems = document.querySelectorAll('#nav li a')
+        const subNavMenu = document.querySelector('#nav li .subnav')
+
+        for (const item of subNavItems){
+          
+            item.addEventListener('click',function (e){
+                
+                const isParentMenu = item.nextElementSibling && item.nextElementSibling.classList.contains('subnav')
+                if(!isParentMenu) {
+                    header.style.height = null
+                }
+                else {
+                    e.preventDefault();
+                    subNavMenu.classList.toggle('closeSubNav')
+
+                    
+                }
+
+            })
+        }
     </script>
+
 </body>
 
 </html>
