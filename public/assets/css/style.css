@@ -64,7 +64,7 @@ html {
     left: 0;
     right: 0;
     z-index: 1;
-    
+
 
 }
 
@@ -174,7 +174,7 @@ html {
 #slider {
     margin-top: 46.5px;
     padding-top: 50%;
-    background: url('/public/assets/img/slider.jpg') top center / cover no-repeat;
+    background: url('https://c.wallhere.com/photos/39/7e/anime_girls_anime_Hatsune_Miku_Vocaloid_QYS3-1576385.jpg!d') top center / cover no-repeat;
     position: relative;
 }
 
@@ -370,6 +370,12 @@ html {
 
 .upper-form {
     padding-bottom: 8px;
+}
+
+.contact-container textarea {
+    font-family: Arial, Helvetica, sans-serif;
+    max-height: 96px;
+    overflow-y: scroll;
 }
 
 
