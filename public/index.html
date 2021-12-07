@@ -182,8 +182,8 @@
 
                             <div class="row under-form">
                                 <div class="col col-1">
-                                    <textarea name="" id="message-auto-grow" placeholder="Type your message here"
-                                        class="form-control"></textarea>
+                                    <textarea placeholder="Type your message here..."
+                                        class="form-control message-auto-grow"></textarea>
                                     <!-- <input required type="text" name="" placeholder="Message" id="" class="form-control"> -->
                                 </div>
 
@@ -201,7 +201,16 @@
 
             </div>
             <!-- End Section Contact-->
+
             <div class="map"><img src="./assets/img/map.jpg" alt=""></div>
+
+            <div id="contact" class="section-content">
+                <h2 class="section-heading">PREVIEW IMAGE</h2>
+                <input type="file" accept="image/*" class="inputImage">
+                </br>
+                <img id="previewImage" src="#" alt="">
+
+            </div>
         </div>
 
         <div id="footer">
@@ -321,13 +330,36 @@
 
 
         // TextArea Handling only 1 if more use loop
-        const tA = document.getElementById('message-auto-grow');
-            tA.setAttribute('style', 'height:' + (tA.scrollHeight) + 'px;');
-            tA.addEventListener("input", OnInput, false);
+        const tA = document.querySelector('.message-auto-grow');
+        tA.setAttribute('style', 'height:' + (tA.scrollHeight) + 'px;');
+        tA.addEventListener("input", OnInput);
         function OnInput(e) {
+            if (this.style.height.replace(/[^0-9]/g, '') > 91) {
+                this.style.overflowY = 'scroll'
+            }
+            else {
+                this.style.overflowY = 'hidden'
+            }
             this.style.height = 'auto';
             this.style.height = (this.scrollHeight) + 'px';
+
         }
+        // Add image and preview it
+        
+        const image = document.querySelector('.inputImage')
+        image.addEventListener('change', loadFile)
+        function loadFile(e) {
+            console.log("Filename: " + e.target.files[0].name);
+            console.log("Type: " + e.target.files[0].type);
+            console.log("Size: " + e.target.files[0].size + " bytes");
+            
+            const preview = document.querySelector('#previewImage')
+            preview.src = URL.createObjectURL(e.target.files[0]);
+            preview.onload = function () {
+                URL.revokeObjectURL(preview.src) // free memory
+            }
+        };
+
 
     </script>
 

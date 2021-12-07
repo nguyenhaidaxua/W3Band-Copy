@@ -5,6 +5,9 @@
     }
 }
 
+
+/* Tablet */
+
 /* Tablet */
 @media (min-width: 740px) and (max-width: 1023px) {
     #header .menu-btn {
@@ -70,9 +73,10 @@
         width: 100%;
     }
 
-    #content .tour-btn{
+    #content .tour-btn {
         width: 100%;
     }
+
     .modal-container {
         width: 70%;
 

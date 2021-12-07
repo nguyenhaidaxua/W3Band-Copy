@@ -372,10 +372,14 @@ html {
     padding-bottom: 8px;
 }
 
-.contact-container textarea {
+.scrollText {
+    overflow-y: scroll;
+}
+
+.contact-container .message-auto-grow {
     font-family: Arial, Helvetica, sans-serif;
     max-height: 96px;
-    overflow-y: scroll;
+    overflow-y: hidden;
 }
 
 
