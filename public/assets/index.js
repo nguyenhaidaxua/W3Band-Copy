@@ -93,12 +93,12 @@ image.addEventListener('change', local)
 var i = 0
 var main = document.querySelector('.imagePreviewBlock')
 function local(e) {
-    if (main){
+    if (main) {
         localStorage.clear()
         localStorage.setItem(`img-0`, URL.createObjectURL(e.target.files[0]))
         const test = document.createElement('div')
         test.classList.add('divImg')
-        test.innerHTML = `<img id="img-${i}" class="previewImage" onclick="zoomPreviewImg()" src="${localStorage.getItem('img-0')}"> <button id="imgBtn-${i}" class="imgBtn" onclick="deleteImg(${i})"><i class="ti-close"></i></button></img>`
+        test.innerHTML = `<img id="img-${i}" class="previewImage" onclick="zoomPreviewImg(${i})" src="${localStorage.getItem('img-0')}"> <button id="imgBtn-${i}" class="imgBtn" onclick="deleteImg(${i})"><i class="ti-close"></i></button></img>`
         main.appendChild(test)
         i++
 
@@ -106,25 +106,23 @@ function local(e) {
 
 }
 
-function zoomPreviewImg() {
-    const imgs = document.querySelectorAll('.previewImage')
+function zoomPreviewImg(i) {
+    const img = document.getElementById('img-' + i)
     
-    for (const img of imgs){
-        
-        var isNotZoom = img.clientHeight === 100
-        if (isNotZoom) {
-            img.classList.add('zoomPreviewImage')
-            img.nextElementSibling.classList.add('showImgBtn')
-        }
-        else {
-            img.classList.remove('zoomPreviewImage')
-            img.nextElementSibling.classList.remove('showImgBtn')
+    var isNotZoom = img.clientHeight === 100
+    if (isNotZoom) {
+        img.classList.add('zoomPreviewImage')
+        img.nextElementSibling.classList.add('showImgBtn')
+    }
+    else {
+        img.classList.remove('zoomPreviewImage')
+        img.nextElementSibling.classList.remove('showImgBtn')
 
 
-        }
     }
 
- 
+
+
 
 }
 Element.prototype.remove = function () {
@@ -137,8 +135,8 @@ NodeList.prototype.remove = HTMLCollection.prototype.remove = function () {
         }
     }
 }
-function deleteImg(i){
+function deleteImg(i) {
     console.log(i)
-    document.getElementById('img-'+i).remove()
-    document.getElementById('imgBtn-'+i).remove()
+    document.getElementById('img-' + i).remove()
+    document.getElementById('imgBtn-' + i).remove()
 }
